@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const request = require("request");
-const pool = requirte("./dbPool.js");
+const pool = require("./dbPool.js");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));

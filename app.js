@@ -96,7 +96,7 @@ function getRandomImage(keyword, count) {
     d
 }
 
-app.listen(process.env.PORT || 8080, process.env.IP || "127.0.0.1",
+app.listen(process.env.PORT, process.env.IP,
     function () {
         console.log("Express server is running");
     });

@@ -41,7 +41,7 @@ app.get("/api/updateFavorites", function (req, res) {
     }//switch
     pool.query(sql, sqlParams, function (err, rows, fields) {
         if (err) throw err;
-        console.log(rows);
+        console.ldog(rows);
         res.send(rows.affectedRows.toString());
     });
 

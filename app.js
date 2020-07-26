@@ -93,7 +93,7 @@ function getRandomImage(keyword, count) {
         });
 
     });
-    d
+    
 }
 
 app.listen(process.env.PORT, process.env.IP,

@@ -1,23 +1,26 @@
 <%- include('partials/header.ejs') %>
-    <body>
 
-        <main>
-            <h1> Cool Images </h1>
-            <form action="/search">
-            <input type="text" placeholder="Type Keyword" name="keyword"/>
+<body>
+
+    <main>
+        <h1> Cool Images </h1>
+        <form action="/search">
+            <input type="text" placeholder="Type Keyword" name="keyword" />
             <br><br>
             <button>Search</button>
-            <br><a href="/getKeywords"> See Favorites </a>
+            <br><a id="favLink" href="/getKeywords"> See Favorites </a>
         </form>
         <hr>
-        <% imageUrlArray.forEach(function(imageUrl, i){ %>
+        <div id="resultsContainer">
+            <% imageUrlArray.forEach(function(imageUrl, i){ %>
             <%- (i % 3 === 0)?'<br>':'' %>
-            <img src='<%= imageUrlArray[i] %>' width="200" height="200"/>
+            <img src='<%= imageUrlArray[i] %>' width="200" height="200" />
             <img class="favoriteIcon" src='img/favorite.png' width="20">
-        <% }); %>
-        
-        </main>
-        <%- include('partials/footer.ejs') %>
-        
-    </body>
+            <% }); %>
+        </div>ß
+    </main>
+    <%- include('partials/footer.ejs') %>
+
+</body>
+
 </html>
